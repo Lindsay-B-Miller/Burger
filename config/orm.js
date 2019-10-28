@@ -18,12 +18,13 @@ var orm = {
         });
     },
     update: function (table, val, condition, cb) {
-        var queryString = "UPDATE ?? SET burger_name = ? WHERE id = ?";
+        var queryString = "UPDATE ?? SET devoured = ? WHERE id = ?";
+        // console.log(val + "right here!!!!")
         connection.query(queryString, [table, val, condition, cb], function (err, result) {
             console.log(queryString)
             if (err) throw err;
             cb(result);
-        });
+        })
     }
 }
 
