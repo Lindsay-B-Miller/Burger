@@ -1,2 +1,2 @@
-INSERT INTO burgers (burger_name, devoured)
-VALUES ("Big Bad Barbecue", "false"), ("Gargantuan Guacamole", "false"), ("Terrifically Tantalizing Truffle", "false")
+INSERT INTO burgers (burger_name)
+VALUES ("Big Bad Barbecue"), ("Gargantuan Guacamole"), ("Terrifically Tantalizing Truffle")

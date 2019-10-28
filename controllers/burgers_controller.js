@@ -13,4 +13,31 @@ router.get("/", function (req, res) {
     });
 });
 
+router.post("/api/burgers", function (req, res) {
+    console.log(req.body);
+    burger.insertOne([
+        `burger_name`
+    ], [
+        req.body.burger
+    ], function (result) {
+        // Send back ID of new burger
+        res.json({ id: result.insertId });
+    });
+});
+
+router.put("/api/burgers/:id", function (req, res) {
+    var condition = req.params.id;
+    console.log("condition", condition);
+
+    burger.update({
+        devoured: req.body.devoured
+    }, condition, function (result) {
+        if (result.changedRows == 0) {
+            return res.status(404).end();
+        } else {
+            res.status(200).end();
+        }
+    });
+});
+
 module.exports = router;
