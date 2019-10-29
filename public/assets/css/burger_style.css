@@ -1,15 +1,51 @@
 body {
-    background-color: orange;
+    background-color: #ffd072;
 }
 
-.title {
+.burgerTitle {
+    text-align: center;
+    color: #ec2f05;
+    font-family: 'Love Ya Like A Sister', cursive;
+    margin: 15px;
+}
+
+.burgerView {
+    margin-top: 10px;
+}
+
+.addBurger {
     text-align: center;
 }
 
-/* .uneaten {
-    float: left;
+#newBurger {
+    width: 400px;
+    height: 50px;
 }
 
-.eaten {
-    float: right;
-} */
+.devouredBurger {
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border: 3px solid orange;
+}
+
+.notDevoured {
+    padding: 10px;
+    font-size: 24px;
+    font-family: 'Love Ya Like A Sister', cursive;
+}
+
+#submit:hover {
+    color: orange;
+}
+
+.devour:hover {
+color: orange;
+}
+
+.burgerGif {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 17%;
+}

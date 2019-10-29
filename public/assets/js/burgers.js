@@ -3,7 +3,6 @@ $(function () {
     $("#submit").on("click", function (event) {
         event.preventDefault();
         var burger_name = $("#newBurger").val().trim();
-        console.log("LOOK AT ME" + burger_name);
         var burger = {
             burger: burger_name
         }
